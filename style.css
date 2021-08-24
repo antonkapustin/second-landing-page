@@ -1,0 +1,17 @@
+html {
+    height: 100%;
+}
+body {
+    background: black;
+    /* background-image: url("assets/photo1629750921.jpeg"); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    margin: 0;
+    padding: 9.5vh 3.7vw;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+:root {
+   --color-green:#03530f; 
+}

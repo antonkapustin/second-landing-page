@@ -1,8 +1,15 @@
 .slider {
+display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    &__content {
     display: flex;
     overflow-x: auto;
     overflow-y: visible;
     justify-content: space-between;
+    }
 
     &__item {
         display: flex;
@@ -12,6 +19,9 @@
         flex-shrink: 0;
         padding: 0 1.7vw;
         box-sizing: border-box;
+        background-size: cover;
+        background-position: center center;
+        min-width:415px;
 
         &:first-child {
             padding-right: 0.4vw;
@@ -58,9 +68,8 @@
 
     &__footer {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        height: 3vh;
+        margin-top: auto;
         box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.8);
     }
 }

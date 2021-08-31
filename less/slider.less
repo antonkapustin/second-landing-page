@@ -1,17 +1,32 @@
 .slider {
-display: flex;
+    display: flex;
+    scroll-snap-align: start;
+    overflow: auto;
+    scroll-behavior: smooth;
+    flex-shrink: 0;
+    
 
     &:not(:last-child) {
         margin-bottom: 40px;
     }
     &__content {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: visible;
-    justify-content: space-between;
+        display: flex;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
     }
-
-    &__item {
+    &__name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1px solid black;
+        flex-shrink: 0;
+        padding-right: 0.4vw;
+        padding-left: 0.4vw;
+        min-width:600px
+    }
+    &__box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -21,12 +36,14 @@ display: flex;
         box-sizing: border-box;
         background-size: cover;
         background-position: center center;
-        min-width:415px;
+        min-width: 900px;
 
-        &:first-child {
-            padding-right: 0.4vw;
-            padding-left: 0.4vw;
-        }
+        margin-right: 2.5vw;
+        scroll-snap-align: start;
+        transform-origin: center center;
+        transform: scale(1);
+        transition: transform 0.5s;
+        position: relative;
     }
 
     &__img {
@@ -56,7 +73,7 @@ display: flex;
 
     &__icon {
         &_plus {
-            background-image: url("../assets/icons/plus.png");
+            background-image: url("assets/icons/plus.png");
             background-repeat: no-repeat;
             width: 16px;
             height: 16px;
@@ -70,6 +87,8 @@ display: flex;
         display: flex;
         margin-top: auto;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: rgba(255, 255, 255, 0.8);
     }
 }
